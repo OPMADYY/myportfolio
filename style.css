@@ -1,0 +1,228 @@
+/* Global Styles */
+body {
+  background: radial-gradient(circle at top left, #0f0f0f, #000000 70%);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #111;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+  padding-left: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1f1c2c, #928dab); /* Gamer gradient */
+  color: #fff;
+}
+
+
+.hero h1 span {
+  color: #00ffff;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* ← This moves your face into view */
+  box-shadow: 0 0 25px #00ffff;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+
+
+.btn {
+  background: #00ffff;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+
+
+/* Sections */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(255,0,255,0.05));
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.05);
+}
+
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 2px solid #00ffff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  margin: 1rem 0;
+}
+
+/* Skills Icons */
+.skills-group i {
+  color: #00ffff;
+  margin-right: 8px;
+}
+
+.skills-group img:hover {
+  filter: drop-shadow(0 0 5px #00ffff);
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.skills-group {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.skills-group:nth-child(2) { animation-delay: 0.4s; }
+.skills-group:nth-child(3) { animation-delay: 0.6s; }
+.skills-group:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.icons img {
+  height: 40px;
+  margin: 0.5rem;
+}
+
+/* Social Media Links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.social-links a i {
+  font-size: 1.2rem;
+  color: #00ffff;
+}
+
+
+.social-links a:hover i {
+  filter: drop-shadow(0 0 5px #00ffff);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  font-size: 0.9rem;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 480px) {
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-links a {
+    width: 100%;
+    justify-content: center;
+  }
+
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .icons img {
+    height: 30px;
+  }
+}
+footer {
+  background: #0d0d0d;
+  color: #00ffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid rgba(0, 255, 255, 0.1);
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 20px rgba(0, 255, 255, 0.05);
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+}
+
